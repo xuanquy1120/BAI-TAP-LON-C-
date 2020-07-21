@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyNguoiChoiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanLyNguoiChoi.dbo.NguoiChoiThuHai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="NguoiChoiThuHai">
+    <Key>
+      <PropertyRef Name="TenNguoiChoi" />
+    </Key>
+    <Property Name="TenNguoiChoi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Diem2" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanLyNguoiChoi.dbo.NguoiChoiThuNhat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="NguoiChoiThuNhat">
+    <Key>
+      <PropertyRef Name="TenNguoiChoi" />
+    </Key>
+    <Property Name="TenNguoiChoi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Diem1" Type="int" />
+  </EntityType>
+  <EntityContainer Name="QuanLyNguoiChoiModelStoreContainer">
+    <EntitySet Name="NguoiChoiThuHai" EntityType="Self.NguoiChoiThuHai" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NguoiChoiThuHai].[TenNguoiChoi] AS [TenNguoiChoi], 
+    [NguoiChoiThuHai].[Diem2] AS [Diem2]
+    FROM [dbo].[NguoiChoiThuHai] AS [NguoiChoiThuHai]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NguoiChoiThuNhat" EntityType="Self.NguoiChoiThuNhat" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NguoiChoiThuNhat].[TenNguoiChoi] AS [TenNguoiChoi], 
+    [NguoiChoiThuNhat].[Diem1] AS [Diem1]
+    FROM [dbo].[NguoiChoiThuNhat] AS [NguoiChoiThuNhat]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

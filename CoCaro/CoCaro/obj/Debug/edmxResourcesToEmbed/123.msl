@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLP3ModelStoreContainer" CdmEntityContainer="QLP3Entities">
+    <EntitySetMapping Name="Plays">
+      <EntityTypeMapping TypeName="QLP3Model.Play">
+        <MappingFragment StoreEntitySet="Play">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="wins" ColumnName="wins" />
+          <ScalarProperty Name="loses" ColumnName="loses" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

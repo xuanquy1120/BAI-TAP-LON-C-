@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanLyNguoiChoiModelStoreContainer" CdmEntityContainer="QuanLyNguoiChoiEntities1">
+    <EntitySetMapping Name="NguoiChoiThuHais">
+      <EntityTypeMapping TypeName="QuanLyNguoiChoiModel.NguoiChoiThuHai">
+        <MappingFragment StoreEntitySet="NguoiChoiThuHai">
+          <ScalarProperty Name="TenNguoiChoi" ColumnName="TenNguoiChoi" />
+          <ScalarProperty Name="Diem2" ColumnName="Diem2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NguoiChoiThuNhats">
+      <EntityTypeMapping TypeName="QuanLyNguoiChoiModel.NguoiChoiThuNhat">
+        <MappingFragment StoreEntitySet="NguoiChoiThuNhat">
+          <ScalarProperty Name="TenNguoiChoi" ColumnName="TenNguoiChoi" />
+          <ScalarProperty Name="Diem1" ColumnName="Diem1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

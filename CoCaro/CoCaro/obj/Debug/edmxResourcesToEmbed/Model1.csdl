@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyNguoiChoiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NguoiChoiThuHai">
+    <Key>
+      <PropertyRef Name="TenNguoiChoi" />
+    </Key>
+    <Property Name="TenNguoiChoi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diem2" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NguoiChoiThuNhat">
+    <Key>
+      <PropertyRef Name="TenNguoiChoi" />
+    </Key>
+    <Property Name="TenNguoiChoi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diem1" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="QuanLyNguoiChoiEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NguoiChoiThuHais" EntityType="Self.NguoiChoiThuHai" />
+    <EntitySet Name="NguoiChoiThuNhats" EntityType="Self.NguoiChoiThuNhat" />
+  </EntityContainer>
+</Schema>
